@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Schulte Tables</title>
+    <link rel="stylesheet" href="./public/css/index.css">
+    <link rel="stylesheet" href="./public/css/w3.css">
+    <script type="text/javascript" src="./src/index.js"></script>
+
+    <script src="https://kit.fontawesome.com/861c1ff1d9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="table" class="wrapper w3-container w3-padding-0 w3-margin-0">
+
+    </div>
+
+    <button id="settingsIcon" class="w3-button fa fa-cog"  aria-hidden="true" onclick=document.getElementById('modalWind').style.display='block'></button>
+
+    <div id="modalWind" class="w3-modal w3-animate-opacity display-block">
+        <div class="w3-modal-content" style="width: 30%">
+            <header class="w3-container w3-purple w3-center">
+                <span onclick=document.getElementById('modalWind').style.display='none'
+                      class="w3-button w3-display-topright" style="font-size: 24px">&times;</span>
+                <h2>Schulte Table Menu</h2>
+            </header>
+            <div class="w3-bar w3-light-gray">
+                <button id="barSettings" class="w3-bar-item w3-button w3-indigo w3-hover-indigo" onclick=changeBarClass('settings')>Settings</button>
+                <button id="barStats" class="w3-bar-item w3-button w3-light-blue w3-hover-aqua" onclick=changeBarClass('stats')>Stats</button>
+            </div>
+            <div id="menu">
+                <div class="w3-container">
+                    <div class="w3-half">
+                        <h4>Table Size</h4>
+                        <select id="tableSize" class="w3-select" onchange="createPage()">
+                            <option value="2">2 x 2</option>
+                            <option value="3">3 x 3</option>
+                            <option value="4">4 x 4</option>
+                            <option value="5">5 x 5</option>
+                            <option value="6">6 x 6</option>
+                            <option value="7">7 x 7</option>
+                            <option value="8">8 x 8</option>
+                            <option value="9">9 x 9</option>
+                            <option value="10">10 x 10</option>
+                        </select>
+                    </div>
+                    <div class="w3-half">
+                        <h4>Groups</h4>
+                        <select id="groups" class="w3-select" onchange="createPage()">
+                            <option value="1">1 parameter</option>
+                            <option value="2">2 parameters</option>
+                            <option value="3">3 parameters</option>
+                        </select>
+                    </div>
+                    <h5>Execution order:</h5>
+                    <div id="exOrder">
+
+                    </div>
+                </div>
+            </div>
+            <footer class="w3-container w3-light-gray w3-center">
+                <button id="start" class="w3-button w3-light-blue w3-hover-aqua" onclick=start() style="font-size: 20px; width: 60%;">Start Test</button>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

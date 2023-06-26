@@ -1,0 +1,78 @@
+#settingsIcon{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 7vmin;
+    height: 7vmin;
+    padding: 0;
+    background-size: 7vmin 7vmin;
+    opacity: 0.50;
+    transition: opacity 500ms;
+}
+
+#settingsIcon:hover{
+    opacity: 1;
+}
+
+.cell{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    /*-webkit-user-select: none;*/
+    /*-moz-user-select: -moz-none;*/
+    /*-ms-user-select: none;*/
+    /*user-select: none;*/
+
+    justify-content: center; /* align horizontal */
+    align-items: center;
+
+    float: left;
+    padding: 0;
+
+    width: 50%;
+    height: 100%;
+
+    border: 1px solid #ccc;
+    cursor: default;
+
+    font-size: calc(8vmin);
+    font-weight: bold;
+
+    transition: background 800ms;
+}
+
+.row {
+    width: 100%;
+    height: 50%;
+    margin: 0;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.wrong-cell {
+    color: black;
+    background: #ea9999;
+}
+
+.correct-cell {
+    color: black;
+    background: #9ef699;
+}
+
+.color-num {
+    padding: 3px 10px;
+    margin-right: 2px;
+    margin-bottom: 5px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    font-size: 1.1em;
+    font-weight: bold;
+}
