@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function(){
 class Cell{
     constructor(num, group, color='black') {
         this.num = num
-        this.color = color
     }
 }
 
