@@ -13,7 +13,7 @@ class Cell{
 
 let timer = new Date(0)
 var countCorrect
-var curEl
+
 var cellsSize
 let group
 let choseTableSize = 2
